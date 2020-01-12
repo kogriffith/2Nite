@@ -39,13 +39,16 @@ const Events = () => {
 
             {
                 nearbyEvents.map((event, i) => (
-                    <div key={i}>
-                        <h2>Event: {event.title}</h2>
-                        <h3>{event.type}</h3>
-                        <h3>{event.datetime_local}</h3>
+                    <div className = "single-event-container" key={i}>
                         <img src={event.performers[0].image}/>
-                        <h6>Powered By SeatGeek</h6>
-                        <img src="<%= asset_path('images/60x46.png') %>"/>
+                        <div className = "text-container">
+                          <h1>{event.title}</h1>
+                          
+                          <h3>{event.type}</h3>
+                          <h3>{event.datetime_local}</h3>
+                          <h6>Powered By SeatGeek</h6>
+                         </div>
+                          
                 {/* <h3>{event.performers[0].image}</h3> */}
                     </div>
                 )

@@ -46,6 +46,11 @@ const Events = () => {
 
                             <h3>{event.type}</h3>
                             <h3>{event.datetime_local}</h3>
+                            <h3>{event.venue.name}</h3>
+                            <h3>{event.venue.address}</h3>
+                            <h3>{event.venue.city}</h3>
+
+
                             <h6>Powered By SeatGeek</h6>
                         </div>
 

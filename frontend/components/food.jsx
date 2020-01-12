@@ -42,7 +42,7 @@ const Food = () => {
     return (
         <div>
             {runOnce && getNearbyFood()}
-            <h1 class = "widget-title">Restaurants</h1>
+            <h1 className = "widget-title">Restaurants</h1>
             {
                 nearbyFood.map((restaurant, i) => (
                     <div className = "single-event-container" key={i}>
@@ -50,6 +50,7 @@ const Food = () => {
                         <div className = "text-container">
                             <h1>{restaurant.venue.name}</h1>
                             <h3>{restaurant.venue.location.address}</h3>
+                            <h3>{restaurant.venue.location.city}</h3>
                             <h3>Distance: {(restaurant.venue.location.distance * 0.000621371).toFixed(2)} Miles Away</h3>
                             <h3>{restaurant.venue.categories[0].shortName}</h3>
                         </div>

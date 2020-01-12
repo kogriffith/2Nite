@@ -37,14 +37,18 @@ const Food = () => {
 
     return (
         <div>
+            <h1 class = "widget-title">Restaurants</h1>
             <button onClick={getNearbyFood}>Find Food</button>
             {
                 nearbyFood.map((restaurant, i) => (
-                    <div key={i}>
-                        <h2>Restaurant: {restaurant.venue.name}</h2>
-                        <h3>{restaurant.venue.location.address}</h3>
-                        <h3>Distance: {(restaurant.venue.location.distance * 0.000621371).toFixed(2)} Miles Away</h3>
-                        <h3>Type: {restaurant.venue.categories[0].shortName}</h3>
+                    <div className = "single-event-container" key={i}>
+                        <a href = "https://placeholder.com"><img src="https://via.placeholder.com/280x210"></img></a>
+                        <div className = "text-container">
+                            <h1>{restaurant.venue.name}</h1>
+                            <h3>{restaurant.venue.location.address}</h3>
+                            <h3>Distance: {(restaurant.venue.location.distance * 0.000621371).toFixed(2)} Miles Away</h3>
+                            <h3>{restaurant.venue.categories[0].shortName}</h3>
+                        </div>
                     </div>
                 ))
             }

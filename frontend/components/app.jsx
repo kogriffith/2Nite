@@ -39,7 +39,8 @@ const App = () => {
 
   return (
     <div className="app">
-      <Events/>
+      <div className = "events-container">
+        <Events/>
       {/* <h1>Songkick API</h1>
       <input
         value={songkick} s
@@ -58,6 +59,7 @@ const App = () => {
       <br />
       <button onClick={getNearbyEvents}>Get Events!</button>
       <h2>{nearbyEvents}</h2> */}
+      </div>
     </div>
   )
 };

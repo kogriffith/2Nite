@@ -17,13 +17,13 @@
       <nav class = "header-nav">
         <h1 class = "nav-logo"> 2Nite </h1>
         <% if logged_in? %>
-          <form action="<%= session_url %>" method="post" class="log-out button">
+          <form action="<%= session_url %>" method="post" class="l">
           <input
           type="hidden"
           name="authenticity_token"
           value="<%= form_authenticity_token %>">
           <input type="hidden" name="_method" value="delete">
-          <input type="submit" value="Log Out">
+          <button class = "log-out"><input type="submit">Log Out</button>
         </form>
         <% end %>
       </nav>

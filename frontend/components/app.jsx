@@ -4,9 +4,12 @@ import Food from './food';
 
 
 const App = () => {
+
   return (
     <div className="app">
-      <Events />
+      <div className = "events-container">
+        <Events/>
+      </div>
       <Food />
     </div>
   )

@@ -5,20 +5,40 @@
     name="authenticity_token"
     value="<%= form_authenticity_token %>"
   >
-  <label for="username-input">Username</label>
+  <%#<label for="username-input">Username</label> %>
   <input
     id="username-input"
     type="text"
     name="user[username]"
     value="<%= user.username %>"
+    placeholder= "Username"
   >
     <%= render 'shared/errors', errors: flash[:errors], type: :username %>
-  <label for="password-input">Password</label>
+  <%#<label for="password-input">Password</label> %>
   <input
     type="password"
     name="user[password]"
     id="password-input"
+    placeholder = "Password"
   >
     <%= render 'shared/errors', errors: flash[:errors], type: :password %>
-  <button class="button"><%= submit_text %></button>
+
+  
+  <button class="button first-button"><%= submit_text %></button>
+
+
+  <p>or</p>
+
+
+
+  <% if submit_text === "Sign Up" %>
+
+    <%= link_to '<button type="button" class = "button second-button">Sign In</button>'.html_safe, new_session_url %>
+
+  <% else %>
+
+    <%= link_to '<button type="button" class = "button second-button">Sign Up</button>'.html_safe, new_user_url %>
+  
+  <%end %>
+  
 </form>

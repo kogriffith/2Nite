@@ -20,6 +20,7 @@ html,
 body,
 ul,
 p,
+h1,
 h3,
 button {
      margin: 0;
@@ -27,15 +28,17 @@ button {
      font-family: 'Roboto', sans-serif;
      border: none;
     }
- 
+a {
+  text-decoration:none;
+}
 html, body, #content {
      min-height: 100%;
    }
  
 body {
-     background-color: grey;
-   }
- 
+     background: url(bar.jpg);
+     background-size: cover;
+}
 li {
      list-style: none;
    }
@@ -44,22 +47,76 @@ li {
 
 .splash-content {
     text-align: center;
-
+    background-color: rgba($color: #000000, $alpha: .7);
+    color:white;
+    width:70%;
+    margin:auto;
+    border-radius:5px;
+    padding: 10px;
+    
+    h1 {
+      font-family: 'Lobster', cursive;
+      font-size: 150px;
+    }
+    h3 {
+      font-family: 'Barlow', sans-serif;
+      font-size: 50px;
+    }
+    p {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
     form {
-      border: 1px solid red;
+      display:flex;
+      flex-direction: column;
+      font-family: 'Barlow', sans-serif;
       border-radius: 5px;
-      background-color: white;
+      /*background-color: rgba($color: #000000, $alpha: .7);*/
       max-width: 450px;
       margin: 0 auto;
       padding: 20px;
-    }
+    
 
     input {
       display: block;
       margin: 0 auto;
+      border:none;
+      height:20px;
+      margin: 10px;
+      border-radius: 5px;
+      padding:10px;
+    }
+    
+    .first-button {
+      margin-top: 10px;
     }
     button {
-      margin-top: 10px;
+      display:block;
+      
       padding: 5px;
+      font-family: 'Barlow', sans-serif;
+      background-color: white;
+      padding: 10px;
+      font-size: 20px;
+      border-radius:5px;
+      width:30%;
+      margin:auto;
+    }
+
+    .first-button:hover{
+      background-color:darkslateblue;
+      color:white;
+    }
+
+    .second-button {
+      background-color:gray;
+      color:white;
+
+    }
+
+    .second-button:hover {
+      background-color:darkslateblue;
+      color:white;
     }
   }
+}

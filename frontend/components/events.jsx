@@ -34,6 +34,7 @@ const Events = () => {
 
     return (
         <div>
+          <h1 class = "widget-title">Events</h1>
             <button onClick={getNearbyEvents}>Get Events!</button>
             {/* <h2>{JSON.stringify(nearbyEvents)}</h2> */}
 
@@ -46,7 +47,7 @@ const Events = () => {
                           
                           <h3>{event.type}</h3>
                           <h3>{event.datetime_local}</h3>
-                          <h6>Powered By SeatGeek</h6>
+                          
                          </div>
                           
                 {/* <h3>{event.performers[0].image}</h3> */}

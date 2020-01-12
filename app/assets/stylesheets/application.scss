@@ -126,7 +126,7 @@ li {
   display: flex;
   justify-content: space-between;
   background-color: rgba($color: #000000, $alpha: .7);
-
+  margin-bottom: 20px;
   .nav-logo {
     font-family: 'Lobster', cursive;
     font-size: 50px;
@@ -160,6 +160,11 @@ li {
   width: 70%;
   margin: auto;
 
+  .widget-title {
+    font-family: 'Bebas Neue', cursive;
+    color:white;
+    font-size: 100px;
+  }
 
   .single-event-container {
    
@@ -171,13 +176,13 @@ li {
     color:white;
     font-family: 'Barlow', sans-serif;
     border-radius: 5px;
-    
+
     .text-container {
       padding:10px;
       display: flex;
       flex-direction: column;
       h1{
-        font-family: 'Lobster', cursive;
+        font-family: 'Bebas Neue', cursive;
   
       }
 

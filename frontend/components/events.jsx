@@ -37,6 +37,7 @@ const Events = () => {
     return (
         <div>
             {runOnce && getNearbyEvents()}
+            <h1 className = "widget-title">Events</h1>
             {
                 nearbyEvents.map((event, i) => (
                     <div className="single-event-container" key={i}>

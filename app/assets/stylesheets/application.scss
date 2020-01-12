@@ -120,3 +120,31 @@ li {
     }
   }
 }
+
+/***Nav ***/
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba($color: #000000, $alpha: .7);
+
+  .nav-logo {
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    color:white;
+    margin-left: 20px;
+  }
+
+
+  .log-out {
+    padding: 5px;
+    font-family: 'Barlow', sans-serif;
+    background-color: white;
+    padding: 10px;
+    font-size: 20px;
+    border-radius:5px;
+    margin-right: 20px;
+    
+  }
+
+
+}

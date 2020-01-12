@@ -16,9 +16,11 @@ const Food = () => {
 
     const [coordinates, setCoordinates] = React.useState(["0", "0"]);
     const [nearbyFood, setNearbyFood] = React.useState([]);
+    const [runOnce, setRunOnce] = React.useState(false);
     React.useEffect(() => {
         window.navigator.geolocation.getCurrentPosition((georesponse) => {
             setCoordinates([georesponse.coords.latitude, georesponse.coords.longitude]);
+            setRunOnce(true);
         })
     }, []);
     // const zomato = "0d4cc0fefb05d228f9bca501d7619baf";
@@ -28,16 +30,18 @@ const Food = () => {
         // const url = "https://developers.zomato.com/api/v2.1/geocode?lat=" + coordinates[0] + "&lon=" + coordinates[1];
         const url = "https://api.foursquare.com/v2/venues/explore?client_id=" + foursquare_id + "&client_secret=" + foursquare_secret + "&v=20200111" + "&ll=" + coordinates[0] + "," + coordinates[1]
             + "&radius=24141" + "&query=restaurant";
+        console.log(url);
         axios.get(url)
             .then((res) => {
                 // console.log(JSON.stringify(res.data));
                 setNearbyFood((res.data.response.groups[0].items).splice(0, 3));
             });
+            setRunOnce(false);
     };
 
     return (
         <div>
-            <button onClick={getNearbyFood}>Find Food</button>
+            {runOnce && getNearbyFood()}
             {
                 nearbyFood.map((restaurant, i) => (
                     <div key={i}>

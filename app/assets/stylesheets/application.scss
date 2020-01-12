@@ -13,3 +13,53 @@
  *= require_tree .
  *= require_self
  */
+
+
+/*** CSS RESET ***/
+html,
+body,
+ul,
+p,
+h3,
+button {
+     margin: 0;
+     padding: 0;
+     font-family: 'Roboto', sans-serif;
+     border: none;
+    }
+ 
+html, body, #content {
+     min-height: 100%;
+   }
+ 
+body {
+     background-color: grey;
+   }
+ 
+li {
+     list-style: none;
+   }
+
+/*** Splash Content ***/
+
+.splash-content {
+    text-align: center;
+
+    form {
+      border: 1px solid red;
+      border-radius: 5px;
+      background-color: white;
+      max-width: 450px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    input {
+      display: block;
+      margin: 0 auto;
+    }
+    button {
+      margin-top: 10px;
+      padding: 5px;
+    }
+  }
